@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pacifico&display=swap");
+
+$primaryFontColor: rgb(212, 212, 212);
+$higlightedFontColor: rgb(184, 22, 22);
+
+@mixin centerOfContainer() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Start of Home */
+#home {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/alberto-restifo-4508-unsplash.jpg");
+  background-size: cover;
+  @include centerOfContainer();
+  h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-align: center;
+    letter-spacing: 5px;
+    color: $primaryFontColor;
+    font-size: 10vh;
+    text-shadow: 2px 3px $higlightedFontColor;
+    .highlight {
+      color: $higlightedFontColor;
+      text-shadow: 2px 3px $primaryFontColor;
+    }
+  }
+  h3 {
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    letter-spacing: 3px;
+    color: $primaryFontColor;
+    text-shadow: 2px 3px $higlightedFontColor;
+    font-size: 4vh;
+  }
+  .arrow-down {
+    @include centerOfContainer();
+    justify-content: end;
+    margin-top: 10vh;
+    cursor: pointer;
+    img {
+      height: 10vh;
+      background-size: cover;
+    }
+    animation: blinkArrow 0.7s ease infinite alternate;
+  }
+}
+
+@keyframes blinkArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* End of Home */
+
+/* Start of Contact*/
+#contact {
+  @extend #home;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-shadow: 2px 3px $higlightedFontColor;
+  }
+  input[type="button"] {
+    cursor: pointer;
+    height: 8vh;
+    width: au;
+    font-size: 2.5vh;
+    color: $higlightedFontColor;
+    border: solid 2px $higlightedFontColor;
+    border-radius: 25px;
+    &:hover {
+      border: solid 2px $primaryFontColor;
+      color: $primaryFontColor;
+      background-color: $higlightedFontColor;
+    }
+  }
+}
+/* End of Contact*/
+
+/* Start of Modal*/
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  @extend #home;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+  .modal {
+    border-radius: 20px;
+    min-height: 50vh;
+    max-height: auto;
+    min-width: 50vw;
+    max-width: auto;
+    position: relative;
+    background: $primaryFontColor;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: $higlightedFontColor;
+    @include centerOfContainer();
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 5vh;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        color: red;
+      }
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+
+      input[type="submit"] {
+        cursor: pointer;
+        height: 8vh;
+        width: 12vw;
+        font-size: 2.5vh;
+        color: $higlightedFontColor;
+        border: solid 2px $higlightedFontColor;
+        border-radius: 25px;
+        &:hover {
+          border: solid 2px $primaryFontColor;
+          color: $primaryFontColor;
+          background-color: $higlightedFontColor;
+        }
+      }
+      input[type="email"],
+      input[type="text"],
+      textarea {
+        width: 300px;
+      }
+    }
+  }
+}
+
+.showModal {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* End of Modal*/
+
+.home-icon {
+  position: fixed;
+  bottom: 50vh;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: whitesmoke;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 735px) {
+  #home {
+    h1 {
+      font-size: 5vh;
+    }
+    h3 {
+      font-size: 2vh;
+    }
+  }
+}

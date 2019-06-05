@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pacifico&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Start of Home */
+#home, #contact, .modal-bg {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/alberto-restifo-4508-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/alberto-restifo-4508-unsplash.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#home h1, #contact h1, .modal-bg h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #d4d4d4;
+  font-size: 10vh;
+  text-shadow: 2px 3px #b81616;
+}
+
+#home h1 .highlight, #contact h1 .highlight, .modal-bg h1 .highlight {
+  color: #b81616;
+  text-shadow: 2px 3px #d4d4d4;
+}
+
+#home h3, #contact h3, .modal-bg h3 {
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #d4d4d4;
+  text-shadow: 2px 3px #b81616;
+  font-size: 4vh;
+}
+
+#home .arrow-down, #contact .arrow-down, .modal-bg .arrow-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 10vh;
+  cursor: pointer;
+  -webkit-animation: blinkArrow 0.7s ease infinite alternate;
+          animation: blinkArrow 0.7s ease infinite alternate;
+}
+
+#home .arrow-down img, #contact .arrow-down img, .modal-bg .arrow-down img {
+  height: 10vh;
+  background-size: cover;
+}
+
+@-webkit-keyframes blinkArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinkArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* End of Home */
+/* Start of Contact*/
+#contact {
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+#contact h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  text-shadow: 2px 3px #b81616;
+}
+
+#contact input[type="button"] {
+  cursor: pointer;
+  height: 8vh;
+  width: au;
+  font-size: 2.5vh;
+  color: #b81616;
+  border: solid 2px #b81616;
+  border-radius: 25px;
+}
+
+#contact input[type="button"]:hover {
+  border: solid 2px #d4d4d4;
+  color: #d4d4d4;
+  background-color: #b81616;
+}
+
+/* End of Contact*/
+/* Start of Modal*/
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-bg .modal {
+  border-radius: 20px;
+  min-height: 50vh;
+  max-height: auto;
+  min-width: 50vw;
+  max-width: auto;
+  position: relative;
+  background: #d4d4d4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #b81616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-bg .modal .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 5vh;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-bg .modal .modal-close:hover {
+  color: red;
+}
+
+.modal-bg .modal form {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-bg .modal form input[type="submit"] {
+  cursor: pointer;
+  height: 8vh;
+  width: 12vw;
+  font-size: 2.5vh;
+  color: #b81616;
+  border: solid 2px #b81616;
+  border-radius: 25px;
+}
+
+.modal-bg .modal form input[type="submit"]:hover {
+  border: solid 2px #d4d4d4;
+  color: #d4d4d4;
+  background-color: #b81616;
+}
+
+.modal-bg .modal form input[type="email"],
+.modal-bg .modal form input[type="text"],
+.modal-bg .modal form textarea {
+  width: 300px;
+}
+
+.showModal {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* End of Modal*/
+.home-icon {
+  position: fixed;
+  bottom: 50vh;
+  left: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: whitesmoke;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 735px) {
+  #home h1, #contact h1, .modal-bg h1 {
+    font-size: 5vh;
+  }
+  #home h3, #contact h3, .modal-bg h3 {
+    font-size: 2vh;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

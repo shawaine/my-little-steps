@@ -1,0 +1,7 @@
+footer {
+  @extend header;
+  background: $bgToTop;
+  h1 {
+    @include primaryFont(black);
+  }
+}

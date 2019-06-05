@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../img/darko-popovic-369112-unsplash.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  #main {
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin-left: 6vh;
+    font-size: 5vh;
+    h1 {
+      color: white;
+    }
+
+    .typing {
+      color: rgb(186, 224, 236);
+      margin-left: 3vh;
+      position: relative;
+      &::after {
+        content: "|";
+        position: absolute;
+        right: -3px;
+        width: 1px;
+        height: 4vh;
+        animation: blink 0.7s ease infinite;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-icon {
+  position: fixed;
+  bottom: 50vh;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: whitesmoke;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

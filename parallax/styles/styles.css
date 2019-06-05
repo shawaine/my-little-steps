@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(240deg, #834d4d, #503d3d);
+  z-index: -1;
+}
+
+header .branding {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  text-shadow: 3px 3px #a51414;
+  color: white;
+  font-size: 10vh;
+  letter-spacing: 5px;
+  font-family: "Lobster", cursive;
+  z-index: 1;
+}
+
+header .branding h3 {
+  font-size: 40px;
+}
+
+header .chair {
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%);
+}
+
+header .big-rose {
+  height: 40vh;
+  position: absolute;
+  top: 10%;
+  right: 40%;
+}
+
+header .small-rose {
+  height: 20vh;
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #633a3a;
+  text-shadow: 3px 3px #a51414;
+  color: white;
+  font-size: 10vh;
+  letter-spacing: 5px;
+  font-family: "Lobster", cursive;
+}
+
+.home-icon {
+  position: fixed;
+  bottom: 50vh;
+  left: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: whitesmoke;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

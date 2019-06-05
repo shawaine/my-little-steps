@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+
+@mixin putInCenterOfContainer() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  height: 10vh;
+  @include putInCenterOfContainer();
+  color: white;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-container {
+  @include putInCenterOfContainer();
+  position: relative;
+  height: 40vh;
+  width: 40vw;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.transition-img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fade {
+  &::after {
+    content: "Hello World";
+    color: white;
+    font-size: 30px;
+    @include putInCenterOfContainer();
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  &:hover::after {
+    opacity: 0.5;
+  }
+}
+
+.home-icon {
+  position: fixed;
+  bottom: 50vh;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: whitesmoke;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

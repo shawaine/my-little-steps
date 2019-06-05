@@ -1,0 +1,67 @@
+#preloader {
+  box-sizing: border-box;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  h2 {
+    @include primaryFont(black);
+    position: absolute;
+    top: 75%;
+    font-size: 50px;
+  }
+  .paper-plane {
+    height: 200px;
+    animation: paper-plane 1s ease infinite alternate;
+  }
+  .cloud1,
+  .cloud2,
+  .cloud3 {
+    position: absolute;
+    height: 100px;
+    right: 0%;
+    z-index: -1;
+  }
+  .cloud1 {
+    top: 10%;
+    transform: translate(100%, -10%);
+    animation: clouds 3s ease infinite 1s;
+  }
+  .cloud2 {
+    top: 40%;
+    transform: translate(100%, -40%);
+    animation: clouds 3s ease infinite 2s;
+  }
+  .cloud3 {
+    top: 80%;
+    transform: translate(100%, -80%);
+    animation: clouds 3s ease infinite;
+  }
+
+  @keyframes paper-plane {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(50px);
+    }
+  }
+
+  @keyframes clouds {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 130%;
+    }
+  }
+}
+
+.preloader-finish {
+  opacity: 0;
+  pointer-events: none;
+}

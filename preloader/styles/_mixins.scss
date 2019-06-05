@@ -1,0 +1,8 @@
+@mixin primaryFont($color) {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Baloo Bhai", cursive;
+  letter-spacing: 1vw;
+  font-size: 100px;
+  color: $color;
+}
